@@ -268,7 +268,6 @@ body.dark .btn-copy{
     font-weight:700;
 
     display:flex;
-    justify-content:space-between;
     align-items:center;
 
 }
@@ -294,6 +293,16 @@ body.dark .btn-copy{
 
 .group.active .group-body{
     display:block;
+}
+
+.title{
+    margin-left: 13px;
+    font-size: 23px;
+}
+
+.title span{
+    margin-left: 2px;
+    font-size: 15px;
 }
 
 /* ==========================================
@@ -628,4 +637,19 @@ pre{
 .badge-error{
     background:#fee2e2;
     color:#991b1b;
+}
+/* ==========================================
+   FOLDER ICONS
+   ========================================== */
+
+.open-folder {
+    display: none;
+}
+
+.group.active .folder {
+    display: none;
+}
+
+.group.active .open-folder {
+    display: inline-block;
 }
