@@ -20,6 +20,16 @@
 }
 
 /* ==========================================
+   FONT
+   ========================================== */
+h1,
+h2,
+h3,
+.group-title,
+.section-title {
+    font-family: 'Rubik', sans-serif;
+}
+/* ==========================================
    DARK MODE
    ========================================== */
 
@@ -265,7 +275,7 @@ body.dark .btn-copy{
     cursor:pointer;
 
     font-size:22px;
-    font-weight:700;
+    font-weight:600;
 
     display:flex;
     align-items:center;
