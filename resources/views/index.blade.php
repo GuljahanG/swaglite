@@ -202,7 +202,15 @@
                                 </button>
 
                                 {{-- Example Response --}}
+                                <div class="section-title" style="margin-top:25px;" >
+                                    Live Response
+                                </div>
 
+                                <pre class="response-box" id="response-{{ $route['id'] }}">
+{
+    "message": "Click Execute"
+}
+                                </pre>
                                 @foreach($route['responses'] as $response)
 
                                     <div class="response-card">
@@ -218,27 +226,18 @@
                                         </div>
 
                                         <pre>
-                                            {{ json_encode(
-                                                $response['example'],
-                                                JSON_PRETTY_PRINT
-                                            ) }}
+{{ json_encode(
+    $response['example'],
+    JSON_PRETTY_PRINT
+) }}
                                         </pre>
 
                                     </div>
 
                                 @endforeach
 
-                                <div class="section-title" style="margin-top:25px;" >
-                                    Live Response
-                                </div>
-
-                                <pre class="response-box" id="response-{{ $route['id'] }}">
-                                {
-                                    "message": "Click Execute"
-                                }
-                                </pre>
                             </div>
-                          
+            
                         </div>
 
                     </div>
