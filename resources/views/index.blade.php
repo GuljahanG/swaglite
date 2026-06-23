@@ -15,7 +15,7 @@
 
 <div class="sl-header">
 
-    <div>
+    <div class="swaglite-container">
         <h1>🚀 SwagLite</h1>
         <p>
             Laravel API Documentation

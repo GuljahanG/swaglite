@@ -3,7 +3,7 @@
    ========================================== */
 
 :root{
-    --bg:#f8fafc;
+    --bg:#f1f1f1;
     --card:#ffffff;
     --border:#e2e8f0;
 
@@ -92,7 +92,7 @@ input{
 
     border-radius:16px;
 
-    padding:24px;
+    padding:14px 24px;
 
     margin-bottom:30px;
 
@@ -119,6 +119,15 @@ input{
     display:flex;
     gap:12px;
     align-items:center;
+}
+
+.swaglite-container{
+    display: flex;
+}
+
+.swaglite-container p{
+    align-self: center;
+    margin-left: 30px;
 }
 
 /* ==========================================
@@ -270,7 +279,7 @@ body.dark .btn-copy{
 
     border-radius:14px;
 
-    padding:16px 24px;
+    padding:14px 24px;
 
     cursor:pointer;
 
