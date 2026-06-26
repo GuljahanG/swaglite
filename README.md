@@ -21,6 +21,12 @@ Lightweight API documentation for Laravel.
 composer require guljahang/swaglite
 ```
 
+Publish the package assets:
+
+```bash
+php artisan vendor:publish --tag=swaglite-assets
+```
+
 ## Usage
 
 ### Response Documentation
