@@ -4,7 +4,6 @@ Lightweight API documentation for Laravel.
 
 ## Features
 
-- Automatic route discovery
 - Interactive API documentation
 - Execute API requests directly from the browser
 - Path parameters (`/users/{id}`)
@@ -25,6 +24,13 @@ Publish the package assets:
 
 ```bash
 php artisan vendor:publish --tag=swaglite-assets
+```
+## Access the Documentation
+
+### After installing the package, start your Laravel application and open:
+
+```bash
+http://localhost:8000/swaglite
 ```
 
 ## Usage
@@ -83,6 +89,12 @@ public function store(Request $request)
 - PUT
 - PATCH
 - DELETE
+
+## Screenshots
+### Light Mode
+![SwagLite Light Mode](docs/images/lightmode.png)
+### Dark Mode
+![SwagLite Dark Mode](docs/images/darkmode.png)
 
 ## License
 
