@@ -674,3 +674,55 @@ pre{
 .group.active .open-folder {
     display: inline-block;
 }
+/* ==========================================
+   AUTH BUTTON
+   ========================================== */
+.auth
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.auth input
+{
+    width: 320px;
+    padding: 10px 14px;
+
+    border: 1px solid var(--sl-border);
+    border-radius: 8px;
+
+    background: var(--sl-card);
+    color: var(--sl-text);
+
+    outline: none;
+
+    transition: .2s;
+}
+
+.auth input:focus
+{
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37,99,235,.15);
+}
+
+.auth button
+{
+    padding: 10px 18px;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: .2s;
+}
+
+.auth button:hover
+{
+    transform: translateY(-1px);
+}
