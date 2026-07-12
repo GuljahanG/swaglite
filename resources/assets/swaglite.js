@@ -298,24 +298,24 @@ function prettyJson(data)
 // ==========================================
 // Save TOKEN
 // ==========================================
-function initTokenStore(){
+// function initTokenStore(){
 
-    const input = document.getElementById('bearer-token');
+//     const input = document.getElementById('bearer-token');
 
-    input.value = localStorage.getItem('swaglite_token') || '';
+//     input.value = localStorage.getItem('swaglite_token') || '';
 
-    document
-        .getElementById('save-token')
-        .addEventListener('click', () => {
+//     document
+//         .getElementById('save-token')
+//         .addEventListener('click', () => {
 
-            localStorage.setItem(
-                'swaglite_token',
-                input.value
-            );
-            console.log('swaglite_token', input.value);
+//             localStorage.setItem(
+//                 'swaglite_token',
+//                 input.value
+//             );
+//             console.log('swaglite_token', input.value);
 
-        });
-}
+//         });
+// }
 
 
 document.addEventListener('click', async event => {
@@ -344,7 +344,7 @@ document.addEventListener('click', async event => {
             'response-' + routeId
         );
     const token =
-        localStorage.getItem('swaglite_token');
+        localStorage.getItem('swaglite_bearer_token');
 
     try {
 
