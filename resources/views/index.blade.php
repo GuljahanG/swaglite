@@ -13,32 +13,7 @@
 </head>
 <body>
 
-<div class="sl-header">
-
-    <div class="swaglite-container">
-        <h1>🚀 SwagLite</h1>
-        <p>
-            Laravel API Documentation
-        </p>
-    </div>
-
-    <div class="sl-actions">
-        <input
-            type="text"
-            id="endpointSearch"
-            placeholder="Search endpoints..."
-        >
-        <button
-            class="btn btn-dark"
-            id="themeToggle"
-        >
-            🌙 Dark Mode
-        </button>
-
-    </div>
-
-</div>
-
+@include('swaglite::header')
 @foreach($routes->groupBy('group') as $group => $items)
 
     <div class="group">

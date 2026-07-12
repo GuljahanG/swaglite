@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initTheme();
     initCopyUrl();
     initCopyCurl();
+    initTokenStore();
 
 });
 
@@ -275,40 +276,6 @@ function flashButton(
 }
 
 // ==========================================
-// EXECUTE PLACEHOLDER
-// (real API execution later)
-// ==========================================
-
-// document.addEventListener(
-//     'click',
-//     event => {
-
-//         if(
-//             event.target.classList.contains(
-//                 'execute-btn'
-//             )
-//         )
-//         {
-//             const endpoint =
-//                 event.target.closest(
-//                     '.endpoint'
-//                 );
-
-//             const responseBox =
-//                 endpoint.querySelector(
-//                     '.response-box'
-//                 );
-
-//             responseBox.textContent =
-// `{
-//     "message": "Execution coming soon"
-// }`;
-//         }
-
-//     }
-// );
-
-// ==========================================
 // UTILITIES
 // ==========================================
 
@@ -327,6 +294,7 @@ function prettyJson(data)
         4
     );
 }
+
 document.addEventListener('click', async event => {
 
     if (
@@ -352,6 +320,8 @@ document.addEventListener('click', async event => {
         document.getElementById(
             'response-' + routeId
         );
+    const token =
+        localStorage.getItem('swaglite_bearer_token');
 
     try {
 
@@ -417,8 +387,10 @@ document.addEventListener('click', async event => {
         const options = {
             method: method,
             headers: {
-                Accept:
-                    'application/json'
+                Accept: 'application/json',
+                ...(token && {
+                    Authorization: `Bearer ${token}`
+                })
             }
         };
 
@@ -493,98 +465,3 @@ ${error.message}`;
     }
 
 });
-
-// document.addEventListener('click', async event => {
-
-//     if (
-//         !event.target.classList.contains(
-//             'execute-btn'
-//         )
-//     ) {
-//         return;
-//     }
-
-//     const button = event.target;
-
-//     const routeId =
-//         button.dataset.id;
-
-//     const method =
-//         button.dataset.method;
-
-//     const uri =
-//         button.dataset.uri;
-// console.log('Request URL:', uri);
-
-//     const responseBox =
-//         document.getElementById(
-//             'response-' + routeId
-//         );
-
-//     try {
-
-//         button.innerText =
-//             'Loading...';
-
-//         const started =
-//             performance.now();
-
-//         const response =
-//             await fetch(uri, {
-//                 method: method,
-//                 headers: {
-//                     Accept:
-//                         'application/json'
-//                 }
-//             });
-
-//         const ended =
-//             performance.now();
-
-//         const duration =
-//             Math.round(
-//                 ended - started
-//             );
-
-//         let data;
-
-//         try {
-
-//             data =
-//                 await response.json();
-
-//         } catch {
-
-//             data =
-//                 await response.text();
-
-//         }
-
-//         responseBox.textContent =
-// `Status: ${response.status}
-
-// Time: ${duration}ms
-
-// ${typeof data === 'string'
-//     ? data
-//     : JSON.stringify(
-//         data,
-//         null,
-//         4
-//     )}`;
-
-//     } catch (error) {
-
-//         responseBox.textContent =
-// `Request failed:
-
-// ${error.message}`;
-
-//     } finally {
-
-//         button.innerText =
-//             '▶ Execute';
-
-//     }
-
-// });
