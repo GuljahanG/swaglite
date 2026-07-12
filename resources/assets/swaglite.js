@@ -295,29 +295,6 @@ function prettyJson(data)
     );
 }
 
-// ==========================================
-// Save TOKEN
-// ==========================================
-// function initTokenStore(){
-
-//     const input = document.getElementById('bearer-token');
-
-//     input.value = localStorage.getItem('swaglite_token') || '';
-
-//     document
-//         .getElementById('save-token')
-//         .addEventListener('click', () => {
-
-//             localStorage.setItem(
-//                 'swaglite_token',
-//                 input.value
-//             );
-//             console.log('swaglite_token', input.value);
-
-//         });
-// }
-
-
 document.addEventListener('click', async event => {
 
     if (
