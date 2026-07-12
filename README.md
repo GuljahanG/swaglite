@@ -10,9 +10,11 @@ Lightweight API documentation for Laravel.
 - JSON request bodies
 - GET, POST, PUT, PATCH and DELETE support
 - Search endpoints instantly
-- Dark mode support
+- Dark mode support 🌙
 - Attribute-based documentation
 - Lightweight and zero external dependencies
+- Built-in Bearer Token authentication
+- Copy endpoint URLs and cURL commands with one click
 
 ## Installation
 
